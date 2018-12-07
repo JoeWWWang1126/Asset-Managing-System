@@ -1,49 +1,37 @@
-# -*- coding: utf-8 -*-
-
-###########################################################################
-## Python code generated with wxFormBuilder (version Jun 17 2015)
-## http://www.wxformbuilder.org/
-##
-## PLEASE DO "NOT" EDIT THIS FILE!
-###########################################################################
-
 import wx
 import wx.xrc
 import wx.grid
 
-
-###########################################################################
-## Class Frame1
-###########################################################################
+#wxpython contributes to the frame design
 
 class Frame1(wx.Frame):
 
     def __init__(self, parent):
         wx.Frame.__init__(self, parent, id=wx.ID_ANY, title='Asset Manager', pos=wx.DefaultPosition,
                           size=wx.Size(950, 800), style=wx.DEFAULT_FRAME_STYLE | wx.TAB_TRAVERSAL)
-        # self.GetBackgroundColor()
         self.SetBackgroundColour((227,230,195))
-
         self.SetSizeHints(wx.DefaultSize, wx.DefaultSize)
         menubar = wx.MenuBar()
         fileMenu = wx.Menu()
         newitem = wx.MenuItem(fileMenu, wx.ID_NEW, text="ChangePassword", kind=wx.ITEM_NORMAL)
-
         fileMenu.Append(newitem)
         menubar.Append(fileMenu,'&Service')
         self.SetMenuBar(menubar)
-
+        #above menubar is just for test, which does not have any function 
+        
         bSizer2 = wx.BoxSizer(wx.VERTICAL)
-
         gbSizer4 = wx.GridBagSizer(0, 0)
         gbSizer4.SetFlexibleDirection(wx.BOTH)
         gbSizer4.SetNonFlexibleGrowMode(wx.FLEX_GROWMODE_SPECIFIED)
-
+        #above part are auto-generate by wx, which determine the layout
+        #----------Example-------------
         self.txtEmployeeID = wx.StaticText(self, wx.ID_ANY, u"EmployeeID", wx.DefaultPosition, wx.DefaultSize, 0)
+        #Frist: Create an object using wx.'xx'. 
         self.txtEmployeeID.Wrap(-1)
-        # self.txtEmployeeID.SetBackgroundColour((230,180,80))
+        #I have no idea what this mean.
         gbSizer4.Add(self.txtEmployeeID, wx.GBPosition(0, 0), wx.GBSpan(1, 1), wx.ALL, 5)
-
+        #This part is to allocate the position for this object.
+        #------------------------------
         self.m_textCtrl1 = wx.TextCtrl(self, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.DefaultSize, 0)
         gbSizer4.Add(self.m_textCtrl1, wx.GBPosition(0, 1), wx.GBSpan(1, 1), wx.ALL, 5)
 
@@ -61,22 +49,9 @@ class Frame1(wx.Frame):
         self.m_textCtrl3 = wx.TextCtrl(self, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.DefaultSize, 0)
         gbSizer4.Add(self.m_textCtrl3, wx.GBPosition(0, 5), wx.GBSpan(1, 1), wx.ALL, 5)
 
-        # self.btnApplyChange = wx.Button(self, wx.ID_ANY, u"PasswordService", wx.DefaultPosition, wx.DefaultSize, 0)
-        # gbSizer4.Add(self.btnApplyChange, wx.GBPosition(1, 3), wx.GBSpan(1, 1), wx.ALL, 5)
-        #
-        # self.txtOLDPassword = wx.TextCtrl(self, wx.ID_ANY, 'OriginalPassword', wx.DefaultPosition, wx.DefaultSize, 0)
-        # gbSizer4.Add(self.txtOLDPassword, wx.GBPosition(1, 4), wx.GBSpan(1, 1), wx.ALL, 5)
-        #
-        # self.txtNewPassword = wx.TextCtrl(self, wx.ID_ANY, 'NewPassword', wx.DefaultPosition, wx.DefaultSize, 0)
-        # gbSizer4.Add(self.txtNewPassword, wx.GBPosition(1, 5), wx.GBSpan(1, 1), wx.ALL, 5)
-        #
-        # self.btnConfirmChange = wx.Button(self, wx.ID_ANY, u"Confirm", wx.DefaultPosition, wx.DefaultSize, 0)
-        # gbSizer4.Add(self.btnConfirmChange, wx.GBPosition(1, 6), wx.GBSpan(1, 1), wx.ALL, 5)
-
         self.btnSearch = wx.Button(self, wx.ID_ANY, u"Search", wx.DefaultPosition, wx.DefaultSize, 0)
         gbSizer4.Add(self.btnSearch, wx.GBPosition(0, 6), wx.GBSpan(1, 1), wx.ALL, 5)
         self.btnSearch.SetBackgroundColour((230, 180, 80))
-
 
         self.btnClear = wx.Button(self, wx.ID_ANY, u"Clear", wx.DefaultPosition, wx.DefaultSize, 0)
         gbSizer4.Add(self.btnClear, wx.GBPosition(0, 7), wx.GBSpan(1, 1), wx.ALL, 5)
@@ -271,37 +246,6 @@ class Frame1(wx.Frame):
         gbSizer7.Add(self.btnBorrow, wx.GBPosition(1, 6), wx.GBSpan(1, 1), wx.ALL, 5)
         self.btnBorrow.Enable(True)
         self.btnBorrow.SetBackgroundColour((230, 180, 80))
-
-        # self.m_staticText13 = wx.StaticText(self, wx.ID_ANY, u"Email Address", wx.DefaultPosition, wx.DefaultSize, 0)
-        # self.m_staticText13.Wrap(-1)
-        # gbSizer7.Add(self.m_staticText13, wx.GBPosition(0, 0), wx.GBSpan(1, 1), wx.ALL, 5)
-        #
-        # self.m_textCtrl10 = wx.TextCtrl(self, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.DefaultSize, 0)
-        # gbSizer7.Add(self.m_textCtrl10, wx.GBPosition(0, 1), wx.GBSpan(1, 1), wx.ALL, 5)
-        #
-        # self.m_button6 = wx.Button(self, wx.ID_ANY, u"SendMail", wx.DefaultPosition, wx.DefaultSize, 0)
-        # gbSizer7.Add(self.m_button6, wx.GBPosition(0, 2), wx.GBSpan(1, 1), wx.ALL, 5)
-        # self.m_button6.SetBackgroundColour((230, 180, 80))
-        #
-        # self.m_staticText14 = wx.StaticText(self, wx.ID_ANY, u"Identify Code", wx.DefaultPosition, wx.DefaultSize, 0)
-        # self.m_staticText14.Wrap(-1)
-        # gbSizer7.Add(self.m_staticText14, wx.GBPosition(0, 3), wx.GBSpan(1, 1), wx.ALL, 5)
-        #
-        # self.m_textCtrl11 = wx.TextCtrl(self, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.DefaultSize, 0)
-        # gbSizer7.Add(self.m_textCtrl11, wx.GBPosition(0, 4), wx.GBSpan(1, 1), wx.ALL, 5)
-        #
-        # self.m_button7 = wx.Button(self, wx.ID_ANY, u"Confirm", wx.DefaultPosition, wx.DefaultSize, 0)
-        # gbSizer7.Add(self.m_button7, wx.GBPosition(0, 5), wx.GBSpan(1, 1), wx.ALL, 5)
-        # self.m_button7.SetBackgroundColour((230, 180, 80))
-
-        # self.themail = wx.TextCtrl(self, wx.ID_ANY, 'Themail', wx.DefaultPosition, wx.DefaultSize, 0)
-        # gbSizer7.Add(self.themail, wx.GBPosition(0, 6), wx.GBSpan(1, 1), wx.ALL, 5)
-        #
-        # self.thecode = wx.TextCtrl(self, wx.ID_ANY, 'thecode', wx.DefaultPosition, wx.DefaultSize, 0)
-        # gbSizer7.Add(self.thecode, wx.GBPosition(0, 7), wx.GBSpan(1, 1), wx.ALL, 5)
-        #
-        # self.checkBox = wx.Button(self, wx.ID_ANY, u"checkBox", wx.DefaultPosition, wx.DefaultSize, 0)
-        # gbSizer7.Add(self.checkBox, wx.GBPosition(1, 7), wx.GBSpan(1, 1), wx.ALL, 5)
 #-------------------------------------------------------------------------------------------------------------------------
         self.m_staticText15 = wx.StaticText(self, wx.ID_ANY, u"Your ID", wx.DefaultPosition, wx.DefaultSize, 0)
         self.m_staticText15.Wrap(-1)
@@ -332,11 +276,6 @@ class Frame1(wx.Frame):
 
         self.Centre(wx.BOTH)
 
-        # Connect Events
-
-
-
-    # Virtual event handlers, overide them in your derived class
 
 
 
