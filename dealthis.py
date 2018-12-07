@@ -1,5 +1,7 @@
 import pdfkit
 class getpdf:
+    #pdfkit is used to transform a HTML to Pdf.
+    #Plus, it also has the superlink_.
     def gpdf(self, HRID, HRName, AssetID, AssetName, TimeLimit,filename):
         body = """  <html>
             <head>
@@ -29,7 +31,3 @@ class getpdf:
         </html>
             """
         pdfkit.from_string(body, filename)
-
-
-# pdfkit.from_string(body, 'out.pdf')
-# pdfkit.from_file('test3.html',r'C:\Users\HP\Desktop\file_pdf.pdf')
